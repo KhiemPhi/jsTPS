@@ -65,11 +65,11 @@ class jsTPS_Unit_Tests {
         // ADD 5 TRANSACTION
         tps.addTransaction(new AddToNum_Transaction(num, 5));
         tps.addTransaction(new AndMask_Transaction(num, num.getNum(), 6));
-        userAssert.assertEquals(6, num.getNum());
+        userAssert.assertEquals(0, num.getNum());
         userAssert.assertEquals(3, tps.getSize());
 
         tps.undoTransaction();
-        userAssert.assertEquals(17, num.getNum());
+        userAssert.assertEquals(17, num.getNum());  
         userAssert.assertEquals(3, tps.getSize());
         userAssert.assertEquals(1, tps.getRedoSize());
         userAssert.assertEquals(2, tps.getUndoSize());
@@ -83,8 +83,24 @@ class jsTPS_Unit_Tests {
         let userAssert = new Assert();
         userAssert.assertEquals(0, num.getNum());
 
+        // ADD 5 TRANSACTION
+        tps.addTransaction(new AddToNum_Transaction(num, 5));
+        tps.addTransaction(new OrMask_Transaction(num, num.getNum(), 12));
+        userAssert.assertEquals (13, num.getNum());
+        userAssert.assertEquals(2, tps.getSize());
 
+        // UNDO TRANSACTION
+        tps.undoTransaction();
+        userAssert.assertEquals(5, num.getNum());
+        userAssert.assertEquals(2, tps.getSize());
+        userAssert.assertEquals(1, tps.getRedoSize());
+        userAssert.assertEquals(1,tps.getUndoSize());
 
+        // ADD 10 TRANSACTION
+        tps.addTransaction(new AddToNum_Transaction(num, 5));
+        tps.addTransaction(new OrMask_Transaction(num, num.getNum(), 12));
+        userAssert.assertEquals (14, num.getNum());
+        userAssert.assertEquals(3, tps.getSize());
     }
 
     /**

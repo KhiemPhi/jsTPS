@@ -3,3 +3,11 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+#inputTester{
+    float:left;
+}
+
+#testResults{
+    float:left;
+}

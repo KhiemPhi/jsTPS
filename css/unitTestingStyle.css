@@ -2,4 +2,8 @@
     font-size: 16pt;
   }
 
+.test_passed_message{
+  color: green;
+  background-color: #E6E6E6;
+}
   

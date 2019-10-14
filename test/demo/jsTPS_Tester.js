@@ -19,10 +19,9 @@ class jsTPS_Tester {
 
  
  
-  mainTester() {
+  mainTester() {   
     
-    var keepGoing = new Boolean(true);
-    while (keepGoing) {
+    
       // DISPLAY THE CURRENT TPS
       console.log("CURRENT jsTPS:");
       console.log(this.tps);
@@ -73,7 +72,7 @@ class jsTPS_Tester {
       else if (entry.startsWith("Q")) {
         keepGoing = false;
       }
-    }
+    
     console.log("GOODBYE");
   }
 }

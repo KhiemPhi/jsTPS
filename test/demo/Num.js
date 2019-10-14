@@ -34,10 +34,10 @@ class Num {
     }
 
     andMask(mask) {
-        this.num = this.num && mask;
+        this.num = this.num & mask;
     }
 
     orMask(mask) {
-        this.num = this.num || mask;
+        this.num = this.num | mask;
     }
 }
