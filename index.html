@@ -29,14 +29,13 @@
         tester1.testRedo();
         tester1.testAndMask();
         tester1.testOrMask();
-
         window.tester2 = new jsTPS_Tester();
       };
     </script>
 
     <script>
-      function myFunction() {
-        document.getElementById("demo").style.color = "red";
+      function jsTPSTesterBegin() {
+        tester2.mainTester();
       }
     </script>
   </head>
@@ -55,14 +54,6 @@
         <span id="userCommandField">Enter Selection:</span>
         <input type="text" id="userCommandInput" />
       </div>
-      <div id="userInputTextSubmission">
-        <span id="userSubmisssion">Enter Value To Add:</span>
-        <input type="text" id="userSubmisssion" />
-      </div>
-      <div id="userNumber">
-        <span id="userNum">Current Num Value:</span>
-        <input type="text" id="userCurrentNum" />
-      </div>
       <button
         id="item_form_submit_button"
         class="item_button"
@@ -70,6 +61,10 @@
       >
         Submit
       </button>
+      <div id="userNumber">
+        <span id="userNum">Current Num Value:</span>
+        <input type="text" id="userCurrentNum" />
+      </div>
     </div>
 
     <div id="testResults">
