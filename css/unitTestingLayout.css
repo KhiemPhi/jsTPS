@@ -1,17 +1,26 @@
 .item_button {
-    margin: auto;
-    border-radius: 10px;
-    cursor: pointer;
+  margin: auto;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-#inputTester{
-    float:left;
+#inputTester {
+  float: left;
+}
+
+#testResults {
+  float: left;
+}
+
+.testCase {
+  float: left;
+  margin-left: 15px;
+}
+
+.test_passed_message {
+  margin-left: 15px;
 }
 
 #testResults{
-    float:left;
-}
-
-.testCase{
-    float:left;
+    text-align: center;
 }

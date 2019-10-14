@@ -1,9 +1,9 @@
 class Assert{
    
 
-    assertEquals(num1, num2){
+    assertEquals(num1, num2, div){
         if (num1 === num2){
-            let testResults = document.getElementById("testResults");            
+            let testResults = document.getElementById(div);            
             let messageElement = document.createElement("div");           
             messageElement.innerHTML =  "Test Passed";
             messageElement.setAttribute("class", "test_passed_message")
@@ -14,10 +14,10 @@ class Assert{
         }
     }
 
-    assertTrue(boolean){
+    assertTrue(boolean,div){
 
         if (boolean){
-            let testResults = document.getElementById("testResults");            
+            let testResults = document.getElementById(div);            
             let messageElement = document.createElement("div");           
             messageElement.innerHTML =  "Test Passed";
             messageElement.setAttribute("class", "test_passed_message")
@@ -31,9 +31,12 @@ class Assert{
     assertFalse(boolean,div){
 
         if (boolean === false){
-            let messageElement = document.createElement("div");
+            let testResults = document.getElementById(div);            
+            let messageElement = document.createElement("div");           
             messageElement.innerHTML =  "Test Passed";
-            console.log("Test Passed");
+            messageElement.setAttribute("class", "test_passed_message")
+            testResults.appendChild(messageElement);
+            console.log ("Test Passed");
         }else{
             console.error("Test Did Not Passed");
         }
