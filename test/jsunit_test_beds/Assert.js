@@ -28,7 +28,7 @@ class Assert{
         }
     }
 
-    assertFalse(boolean){
+    assertFalse(boolean,div){
 
         if (boolean === false){
             let messageElement = document.createElement("div");
