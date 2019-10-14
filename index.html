@@ -13,12 +13,16 @@
     <script src="./test/demo/Num.js"></script>
     <script src="./test/demo/jsTPS_Tester.js"></script>   
     <script src="./test/demo/AddToNum_Transaction.js"></script>
-   
+    <script src="./test/jsunit_test_beds/Assert.js"></script>
+    <script src="./test/jsunit_test_beds/jsTPS_Unit_Tests.js"></script>
 
     <script>
         window.onload = function () {
-            window.tester = new jsTPS_Tester()
-            tester.mainTester();
+            window.tester = new jsTPS_Unit_Tests()
+            tester.testAdd();
+            tester.testUndo();
+            tester.testClear();
+            tester.testRedo();
         }
     </script>
 
