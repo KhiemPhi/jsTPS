@@ -15,23 +15,23 @@ class OrMask_Transaction {
      */
     constructor(initNum, initIntNum, initMask) {
         // KEEP THESE FOR LATER
-        num = initNum;
-        intNum = initIntNum;
-        mask = initMask;
+        this.num = initNum;
+        this.intNum = initIntNum;
+        this.mask = initMask;
     }
 
     /**
      * This transaction simply adds the value to the num.
      */
     doTransaction() {
-        num.orMask(mask);
+        this.num.orMask(this.mask);
     }
 
     /**
      * As the reverse of do, this method substracts from num.
      */
     undoTransaction() {
-        num.setNum(intNum);
+        this.num.setNum(this.intNum);
     }
 
     /**
@@ -40,6 +40,6 @@ class OrMask_Transaction {
      * @return A string storing a textual summary of this object.
      */
     toString() {
-        return "Or Mask " + mask;
+        return "Or Mask " + this.mask;
     }
 }

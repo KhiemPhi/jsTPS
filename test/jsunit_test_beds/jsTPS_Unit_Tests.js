@@ -44,12 +44,13 @@ class jsTPS_Unit_Tests {
      */
     testAndMask() {
         // WE'LL JUST USE A SIMPLE NUM FOR TESTING
-        let tps = new jTPS();
+        let tps = new jsTPS();
         let num = new Num();
+        let userAssert = new Assert();
         userAssert.assertEquals(0, num.getNum());
         
-        // ADD 5 TRANSACTION
-        tps.addTransaction(new AddToNum_Transaction(num, 12));
+        // ADD 12 TRANSACTION
+        tps.addTransaction(new AddToNum_Transaction(num, 12));        
         tps.addTransaction(new AndMask_Transaction(num, num.getNum(), 4));
         userAssert.assertEquals(4, num.getNum());
         userAssert.assertEquals(2, tps.getSize());
@@ -60,10 +61,30 @@ class jsTPS_Unit_Tests {
         userAssert.assertEquals(1, tps.getRedoSize());
         userAssert.assertEquals(1, tps.getUndoSize());
 
+
+        // ADD 5 TRANSACTION
+        tps.addTransaction(new AddToNum_Transaction(num, 5));
+        tps.addTransaction(new AndMask_Transaction(num, num.getNum(), 6));
+        userAssert.assertEquals(6, num.getNum());
+        userAssert.assertEquals(3, tps.getSize());
+
+        tps.undoTransaction();
+        userAssert.assertEquals(17, num.getNum());
+        userAssert.assertEquals(3, tps.getSize());
+        userAssert.assertEquals(1, tps.getRedoSize());
+        userAssert.assertEquals(2, tps.getUndoSize());
+
+
     }
     
     testOrMask() {
-        
+        let tps = new jsTPS();
+        let num = new Num();
+        let userAssert = new Assert();
+        userAssert.assertEquals(0, num.getNum());
+
+
+
     }
 
     /**

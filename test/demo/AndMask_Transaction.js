@@ -1,15 +1,11 @@
 'use strict'
-import jsTPS_Transaction from '../../src/jstps/jsTPS_Transaction.js'
-import Num from './Num'
 
 /**
  *
  * @author McKillaGorilla
  */
 class AndMask_Transaction  {
-    // THIS IS THE OBJECT IT WILL MANIPULATE
-      
-
+  
     /**
      * Constructor for this transaction, it initializes this
      * object with all the data needed to both do and undo
@@ -30,7 +26,7 @@ class AndMask_Transaction  {
      */
     
     doTransaction() {
-        this.andMask(mask);
+        this.num.andMask(this.mask);
     }
 
     /**
@@ -38,7 +34,7 @@ class AndMask_Transaction  {
      */
     
     undoTransaction() {
-        this.num.setNum(intNum);
+        this.num.setNum(this.intNum);
     }
 
     /**
@@ -48,6 +44,6 @@ class AndMask_Transaction  {
      */
 
     toString() {
-        return "And Mask " + mask;
+        return "And Mask " + this.mask;
     }
 }
