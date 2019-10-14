@@ -33,19 +33,25 @@
         window.tester2 = new jsTPS_Tester();
       };
     </script>
-  </head>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").style.color = "red";
+      }
+    </script>
+  
+</head>
 
   <body>
     <div id="Unit Testing">My jsTPS Unit Testing</div>
-    
 
     <div id="inputTester">
-        ENTER A SELECTION
-        <div>(1) Add a Transaction</div>
-        <div>(2) Undo a Transaction</div>
-        <div>(3) Redo a Transaction</div>
-        <div>(4) Clear All Transactions</div>
-        <div>(5) Reset Num and Transactions</div>
+      ENTER A SELECTION
+      <div>(1) Add a Transaction</div>
+      <div>(2) Undo a Transaction</div>
+      <div>(3) Redo a Transaction</div>
+      <div>(4) Clear All Transactions</div>
+      <div>(5) Reset Num and Transactions</div>
       <div id="userInputText">
         <span id="userCommandField">Enter Selection:</span>
         <input type="text" id="userCommandInput" />
@@ -58,11 +64,15 @@
         <span id="userNum">Current Num Value:</span>
         <input type="text" id="userCurrentNum" />
       </div>
-      <button id="item_form_submit_button" class="item_button">Submit</button>
-    
+      <button
+        id="item_form_submit_button"
+        class="item_button"
+        onClick="jsTPSTesterBegin()"
+      >
+        Submit
+      </button>
     </div>
 
     <div id="testResults">UNIT TESTING RESULTS:</div>
-  
   </body>
 </html>
