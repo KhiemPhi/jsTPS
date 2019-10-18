@@ -7,6 +7,11 @@
   background-color: #E6E6E6;
 }
 
+.test_failed_message{
+  color: red;
+  background-color: #E6E6E6;
+}
+
 #testResults{
   background-color: #E6E6E6;
   text-decoration: underline;

@@ -24,7 +24,8 @@ class jsTPS_Tester {
         let update = this.num.getNum();
         let updateTextField = document.getElementById("userCurrentNum");
         updateTextField.value = update;
-        entry.focus();
+        document.getElementById("jsTPState").innerHTML = (this.tps.toString());
+        //entry.focus();
       }
       // UNDO A TRANSACTION
       else if (entry.startsWith("2")) {
@@ -32,6 +33,7 @@ class jsTPS_Tester {
         let update = this.num.getNum();
         let updateTextField = document.getElementById("userCurrentNum");
         updateTextField.value = update;
+        document.getElementById("jsTPState").innerHTML = (this.tps.toString());
         entry.focus();
       }
       // REDO A TRANSACTION
@@ -40,6 +42,7 @@ class jsTPS_Tester {
         let update = this.num.getNum();
         let updateTextField = document.getElementById("userCurrentNum");
         updateTextField.value = update;
+        document.getElementById("jsTPState").innerHTML = (this.tps.toString());
         entry.focus();
       }
       // CLEAR ALL TRANSACTIONS
@@ -48,6 +51,7 @@ class jsTPS_Tester {
         let update = this.num.getNum();
         let updateTextField = document.getElementById("userCurrentNum");
         updateTextField.value = update;
+        document.getElementById("jsTPState").innerHTML = (this.tps.toString());
         entry.focus();
       }
       // CLEAR ALL TRANSACTIONS AND RESET NUM TO 0
@@ -57,6 +61,7 @@ class jsTPS_Tester {
         let update = this.num.getNum();
         let updateTextField = document.getElementById("userCurrentNum");
         updateTextField.value = update;
+        document.getElementById("jsTPState").innerHTML = (this.tps.toString());
         entry.focus();
       }
     } else {

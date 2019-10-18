@@ -36,6 +36,7 @@ class AddToNum_Transaction {
         this.num.setNum(newNum)
     }
 
+        
     /**
      * As the reverse of do, this method substracts from num.
      */

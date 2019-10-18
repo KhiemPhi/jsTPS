@@ -21,6 +21,10 @@
   margin-left: 15px;
 }
 
+.test_failed_message {
+  margin-left: 15px;
+}
+
 #testResults{
     text-align: center;
 }
